@@ -1,0 +1,22 @@
+{
+  "name": "nodetesting",
+  "version": "0.0.0",
+  "authors": [
+    "AdeRoz"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.3.14",
+    "angular": "~1.3.14",
+    "angular-route": "~1.4.0",
+    "angular-resource": "~1.4.0"
+  }
+}
