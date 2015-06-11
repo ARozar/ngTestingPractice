@@ -1,8 +1,9 @@
-angular.module('app').factory('repairsService',[function($resource){
+angular.module('app')
+.factory('repairsService',['$resource',function($resource){
 
-		var getAll = function(){};
+		var getAll = function(){}; 
 
-		return{
+		return {
 			getAll:getAll
 		};
 }]);
