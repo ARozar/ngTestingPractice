@@ -1,9 +1,9 @@
 describe('repairs controller on load',function(){
 
 	//create vars to hold objects required to test a ctrl
-	var $controllerConstructor,scope,mockRepairsService;
+	var $controllerConstructor,scope,fakeRepairsService;
 
-	mockRepairsService = {getAll:function(){}}//jasmine.createSpyObj('mockRepairService',['getAll']);
+	fakeRepairsService = {getAll:function(){}}//jasmine.createSpyObj('mockRepairService',['getAll']);
 	//create app module
 	beforeEach(module('app'));
 
@@ -19,12 +19,12 @@ describe('repairs controller on load',function(){
 	it('should load all repairs',function(){
 
 		//arrange
-		spyOn(mockRepairsService,'getAll')
+		spyOn(fakeRepairsService,'getAll')
 
 		var repairsCtrl = $controllerConstructor('RepairsController',
 			{
 				$scope:scope,
-				repairsService:mockRepairsService
+				repairsService:fakeRepairsService
 				
 			});
 		//act 
@@ -32,6 +32,6 @@ describe('repairs controller on load',function(){
 		//the instantiation of the controller should trigger the call to method being tested
 
 		//assert
-		expect(mockRepairsService.getAll).toHaveBeenCalled();
+		expect(fakeRepairsService.getAll).toHaveBeenCalled();
 	});
 });
