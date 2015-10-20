@@ -8,7 +8,8 @@ var testFiles = [
       'bower_components/angular-resource/angular-resource.js',      
       'app/*.js',
       'app/**/*.js',
-      'tests/**/*.js'
+      'tests/**/*.js',
+      '**/*.html'
 ];
  
 gulp.task('test', function() {

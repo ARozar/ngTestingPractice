@@ -21,9 +21,10 @@ module.exports = function(config) {
       'bower_components/angular-resource/angular-resource.js',
       'app/*.js',
       'app/**/*.js',
-      'tests/**/*.js'
+      'tests/**/*.js',
+      '**/*.html'
     ],
-
+      
 
     // list of files to exclude
     exclude: [
@@ -33,6 +34,7 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      '**/*.html': 'ng-html2js'
     },
 
 
@@ -45,6 +47,14 @@ module.exports = function(config) {
     // web server port
     port: 9876,
 
+    ngHtml2JsPreprocessor: {
+    // strip this from the file path
+    // stripPrefix: 'public/',
+    // stripSuffix: '.ext',
+    // // prepend this to the
+    // prependPrefix: 'served/',
+
+    },
 
     // enable / disable colors in the output (reporters and logs)
     colors: true,
